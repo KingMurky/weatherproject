@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+현재 날씨:
+{{ weather }}
+<br><br>
+현재 온도:
+{{ temperature }}&#8451
+<br><br>
+현재 풍속:
+{{ wind_speed }}
+<br><br>
+현재 풍향:
+{{ wind_deg }}
+<br><br>
+내일 날씨:
+{{ tomorrow_weather }}
+<br><br>
+내일 비와?
+{{ tomorrow_is_rain }}
+<br><br>
+내일 눈와?
+{{ tomorrow_is_snow }}
+<br><br>
+미세먼지:
+{{ pm10 }}
+<br><br>
+대기질 지수:
+{{ aqi }}
+<br><br>
+<a href="{% url 'current' %}">도시 입력</a>
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" action="{% url 'display' %}">
+    {% csrf_token %}
+    사는 도시 입력:
+    <input name="city" type="text">
+
+
+
+</form>
+</body>
+</html>
