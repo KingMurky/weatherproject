@@ -136,6 +136,7 @@ def display(request):
         elif 2<=len(snow_list):
             tomorrow_is_snow = '넹 %d시부터 %d시까지 옵니당' %(snow_list[0],snow_list[-1])
 
+
     gmaps = googlemaps.Client(key='AIzaSyCmM3vFXEdl5yuuWqJApoxPF0H67jWqHAY')
     geocode_result = gmaps.geocode((city_name))
     lat = geocode_result[0]['geometry']['location']['lat']
