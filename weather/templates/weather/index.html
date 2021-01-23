@@ -1,0 +1,176 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>오늘의 날씨는?</title>
+        <link rel="icon" type="image/x-icon" href="{% static "weather/images/favicon.ico" %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="{% static "weather/script4.js" %}" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'weather/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top" style="font-family: 나눔바른펜;">오늘의 날씨는?</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about" style="font-family: 나눔바른펜;">시작하기</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects" style="font-family: 나눔바른펜;">소개</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup" style="font-family: 나눔바른펜;">문의</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container d-flex h-100 align-items-center">
+                <div class="mx-auto text-center">
+                    <h1 class="mx-auto my-0 text-uppercase" style="font-family: 나눔바른펜;">오늘의 날씨는?</h1>
+                    <br><br>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5" style="font-family: 나눔바른펜;">틀려도 책임 안지는 재미삼아 만든 날씨알림이</h2>
+                    <a class="btn btn-primary js-scroll-trigger" href="#about" style="font-family: 나눔바른펜;">시작하기</a>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="text-white mb-4" style="font-family: 나눔바른펜;">맨날 틀리는 기상예보에 지치셨나요?</h2>
+                        <p class="text-white-50" style="font-family: 나눔바른펜;">
+                            그럼 한번 믿어보실래요? 아 물론 틀려도 책임은 안져요. 뻔뻔하다구요? 재밌잖아요! 암튼 한번 눌러봐요<br><br>
+                            <a href="{% url 'current' %}" style="font-family: 나눔바른펜;">날씨 보러 가기</a>
+                        </p>
+                    </div>
+                </div>
+                <img class="img-fluid" src="{% static "weather/images/ipad.png" %}" alt="" />
+            </div>
+        </section>
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container">
+                <!-- Featured Project Row-->
+                <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{% static "weather/images/bg-masthead.jpg" %}" alt="" /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left" >
+                            <h4 style="font-family: 나눔바른펜;">오늘 날씨</h4>
+                            <p class="text-black-50 mb-0" style="font-family: 나눔바른펜;">오늘의 날씨는? 에서는 기본적으로 오늘 날씨를 알려줍니다. 날씨와 기온, 풍속 그리고 별로 필요 없어 보일 풍향까지 알려줘요! 필요 없다구요? 그래도 한번 믿어보세요!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><img class="img-fluid" src="{% static "weather/images/demo-image-01.jpg" %}" alt="" /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white" style="font-family: 나눔바른펜;">내일 날씨</h4>
+                                    <p class="mb-0 text-white-50" style="font-family: 나눔바른펜;">게다가 내일 날씨까지 알려줘요 아무래도 여러분들께는 이게 더 필요하시겠죠? 비가 올지 눈이 올지, 온다면 언제부터 언제까지 오는지도 알려줘요 이정도면 믿을 만 하죠?</p>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row justify-content-center no-gutters">
+                    <div class="col-lg-6"><img class="img-fluid" src="{% static "weather/images/demo-image-02.jpg" %}" alt="" /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white" style="font-family: 나눔바른펜;">미세먼지</h4>
+                                    <p class="mb-0 text-white-50" style="font-family: 나눔바른펜;">여기서 끝이아니라구요! 지역의 미세먼지 정보, 종합적인 대기 질 까지 알려줍니다. 그래도 필요없으세요? 설마요.</p>
+                                    <hr class="d-none d-lg-block mb-0 mr-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Signup-->
+        <section class="signup-section" id="signup">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+                        <form class="form-inline d-flex">
+                            <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" type="email" placeholder="Enter email address..." />
+                            <button class="btn btn-primary mx-auto" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact-->
+        <section class="contact-section bg-black">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Address</h4>
+                                <hr class="my-4" />
+                                <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Email</h4>
+                                <hr class="my-4" />
+                                <div class="small text-black-50"><a href="#!">hello@yourdomain.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Phone</h4>
+                                <hr class="my-4" />
+                                <div class="small text-black-50">+1 (555) 902-8832</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container">Copyright © Your Website 2020</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="{% static "weather/script1.js" %}"></script>
+        <script src="{% static "weather/script2.js" %}"></script>
+        <!-- Third party plugin JS-->
+        <script src="{% static "weather/script3.js" %}"></script>
+        <!-- Core theme JS-->
+        <script src="{% static "weather/scripts.js" %}"></script>
+    </body>
+</html>
