@@ -1,0 +1,119 @@
+
+
+.maincontainer {
+    display: grid;
+    grid-template-columns: 330px 1fr 330px;
+    grid-template-rows: 200px 1fr 1fr 100px;
+}
+
+.weathercontainer {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    text-align: center;
+    border: solid 1px gray;
+    border-radius: 3px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px 5px gray;
+
+
+}
+
+.dwlogo {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+    padding: 70px;
+    font-size: xx-large;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to bottom, black, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.8rem;
+}
+
+.weatherform {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr 100px;
+}
+
+.cityandtime {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-family: '나눔바른펜';
+    font-size: xx-large;
+    padding-top:30px;
+    padding-left:50px;
+    text-align: left;
+}
+
+.weatherandtemp {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-family: '나눔바른펜';
+    font-size: large;
+    padding-left:50px;
+    text-align: left;
+    border-right: solid 1px gray;
+
+}
+
+.tomorrowweather {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-family: '나눔바른펜';
+    font-size: large;
+    padding-left:50px;
+    text-align: left;
+
+}
+.airpollution {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    font-family: '나눔바른펜';
+    font-size: large;
+    padding-left:50px;
+    padding-top:20px;
+    text-align: left;
+    border-right: solid 1px gray;
+}
+
+.returncurrent {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    padding:20px;
+    padding-top:40px;
+    text-align: center;
+
+}
+
+.returncurrent a {
+    text-decoration: none;
+    color: black;
+    font-family: '나눔바른펜';
+    font-size: xx-large;
+
+}
+.returncurrent a:hover {
+    color:red;
+
+}
+
+.temperaturesize {
+    font-size: xx-large;
+}

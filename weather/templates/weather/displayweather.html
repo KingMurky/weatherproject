@@ -1,38 +1,93 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>오늘의 날씨는?</title>
+    <link href="{% static 'weather/dwstyles.css' %}" rel="stylesheet" type="text/css" />
 </head>
 <body>
-현재 날씨:
-{{ weather }}
-<br><br>
-현재 온도:
-{{ temperature }}&#8451
-<br><br>
-현재 풍속:
-{{ wind_speed }}
-<br><br>
-현재 풍향:
-{{ wind_deg }}
-<br><br>
-내일 날씨:
-{{ tomorrow_weather }}
-<br><br>
-내일 비와?
-{{ tomorrow_is_rain }}
-<br><br>
-내일 눈와?
-{{ tomorrow_is_snow }}
-<br><br>
-미세먼지:
-{{ pm10 }}
-<br><br>
-대기질 지수:
-{{ aqi }}
-<br><br>
-<a href="{% url 'current' %}">도시 입력</a>
+<div class="maincontainer">
+    <div class="dwlogo">
+        <a href="{% url 'index' %}" style="font-family: 나눔바른펜;">오늘의 {{ cityname }}날씨는?</a>
+    </div>
+    <div class="weathercontainer">
+        <div class="weatherform">
+            <div class="cityandtime">
+                <div>{{ cityname }}</div>
+            </div>
+            <div class="weatherandtemp">
+                <div>
+                    {{ weather }}
+                    <br>
+                    {% if weather == '맑음' %}
+                        <img src="{% static "weather/images/clear.png" %}">
+                    {% endif %}
+                    {% if weather == '흐림' %}
+                        <img src="{% static "weather/images/clouds.png" %}">
+                    {% endif %}
+                    {% if weather == '폭풍우' %}
+                        <img src="{% static "weather/images/thunderstorm.png" %}">
+                    {% endif %}
+                    {% if weather == '비' %}
+                        <img src="{% static "weather/images/rain.png" %}">
+                    {% endif %}
+                    {% if weather == '눈' %}
+                        <img src="{% static "weather/images/snow.png" %}">
+                    {% endif %}
+                    {% if weather == '안개' %}
+                        <img src="{% static "weather/images/mist.png" %}">
+                    {% endif %}
+                    <div class="temperaturesize">{{ temperature }}&#8451</div>
+                    <br><br>
+                    {{ wind_speed }}
+                </div>
+            </div>
+            <div class="tomorrowweather">
+                내일 날씨:
+                {{ tomorrow_weather }}
+                <br>
+                {% if tomorrow_weather == '맑음'%}
+                    <img src="{% static "weather/images/clear.png" %}">
+                {% endif %}
+                {% if tomorrow_weather == '흐림'%}
+                    <img src="{% static "weather/images/clouds.png" %}">
+                {% endif %}
+                {% if tomorrow_weather == '폭풍우'%}
+                    <img src="{% static "weather/images/thunderstorm.png" %}">
+                {% endif %}
+                {% if tomorrow_weather == '비'%}
+                    <img src="{% static "weather/images/rain.png" %}">
+                {% endif %}
+                {% if tomorrow_weather == '눈'%}
+                    <img src="{% static "weather/images/snow.png" %}">
+                {% endif %}
+                {% if tomorrow_weather == '안개'%}
+                    <img src="{% static "weather/images/mist.png" %}">
+                {% endif %}
+                <br><br>
+                Q. 내일 비와?
+                <br>
+                A. {{ tomorrow_is_rain }}
+                <br><br>
+                Q. 내일 눈와?
+                <br>
+                A. {{ tomorrow_is_snow }}
+            </div>
+            <div class="airpollution">
+                미세먼지: {{ pm10 }}
+                <br>
+                대기질 지수: {{ aqi }}
+            </div>
+
+        </div>
+    </div>
+    <div class="returncurrent">
+        <a href="{% url 'current' %}">도시 입력 페이지로!</a>
+    </div>
+</div>
+
 
 
 </body>

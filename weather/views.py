@@ -180,6 +180,7 @@ def display(request):
         'tomorrow_is_snow' : tomorrow_is_snow,
         'pm10' : pm10,
         'aqi' : aqi,
+        'cityname' : city_name,
 
 
 

@@ -1,0 +1,64 @@
+.currentbody {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("images/bg-masthead.jpg");
+
+}
+
+.currentcontainer {
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-rows: 200px 1fr 1fr 400px;
+}
+
+.mainlogo {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+    font-size: xx-large;
+
+
+}
+.mainlogo a{
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to bottom, white, gray);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.8rem;
+}
+
+.searchcity {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+
+}
+
+.searchcity form input {
+    height: 30px;
+    width: 500px;
+    box-shadow: 5px 5px 10px 5px gray;
+    border-radius: 3px;
+    border:none;
+
+}
+@media (min-width: 790px) and (max-width:1000px) {
+    .mainlogo {
+    text-align: center;
+    font-size: large;
+
+}
+
+}
+
+@media (min-width: 500px) and (max-width: 790px) {
+    .mainlogo {
+    text-align: center;
+    font-size: large;
+
+}
+    
+}

@@ -1,17 +1,24 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>오늘의 날씨는?</title>
+    <link href="{% static 'weather/currentstyles.css' %}" rel="stylesheet" type="text/css" />
 </head>
-<body>
-<form method="POST" action="{% url 'display' %}">
-    {% csrf_token %}
-    사는 도시 입력:
-    <input name="city" type="text">
+<body class="currentbody">
+<div class="currentcontainer">
+    <div class="mainlogo">
+        <h1><a href="{% url 'index' %}" style="font-family: 나눔바른펜;">오늘의 날씨는?</a></h1>
+    </div>
+    <div class="searchcity">
+        <form method="POST" action="{% url 'display' %}">
+            {% csrf_token %}
+            <input name="city" type="text" placeholder="사는 도시를 입력하세요. ex) Seoul">
+        </form>
 
-
-
-</form>
+    </div>
+</div>
 </body>
 </html>
