@@ -15,6 +15,7 @@
     border: solid 1px gray;
     border-radius: 3px;
     padding: 10px;
+    padding-bottom: 50px;
     box-shadow: 5px 5px 10px 5px gray;
 
 
@@ -116,4 +117,18 @@
 
 .temperaturesize {
     font-size: xx-large;
+}
+
+@media (max-width: 1190px) {
+    .weatherandtemp {
+        border-right: none;
+    }
+    .airpollution {
+        border-right: none;
+    }
+    .dwlogo {
+        font-size: medium;
+    }
+
+    
 }
