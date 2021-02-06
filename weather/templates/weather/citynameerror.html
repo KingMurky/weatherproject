@@ -1,11 +1,40 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="{% static 'weather/errorpage.css' %}" rel="stylesheet" type="text/css" />
 </head>
 <body>
-error page!
+<header>
+    <div class="returnTitle">
+        <h1>
+            찾는 도시가 없어요...
+        </h1>
+    </div>
+</header>
+<section>
+    <article class="mainarticle">
+        <div>
+            도시 이름이 잘못된 게 아닐까요? 다시 한번 확인하고 입력해보세요!
+        </div>
+    </article>
+    <article class="returnbutton">
+        <div class="returnCitySearch">
+            <a href="{% url 'current' %}">
+                도시 입력 페이지
+            </a>
+        </div>
+        <div class="returnMainPage">
+            <a href="{% url 'index' %}">
+                메인 페이지
+            </a>
+        </div>
+
+    </article>
+</section>
 
 </body>
 </html>

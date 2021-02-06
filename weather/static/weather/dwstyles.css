@@ -106,12 +106,15 @@
 .returncurrent a {
     text-decoration: none;
     color: black;
+    opacity: 0.3;
     font-family: '나눔바른펜';
     font-size: xx-large;
+    transition: all 2s;
 
 }
 .returncurrent a:hover {
-    color:red;
+    opacity: 1.0;
+    transition: all 2s;
 
 }
 
