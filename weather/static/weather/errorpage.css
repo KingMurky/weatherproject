@@ -20,42 +20,17 @@
     text-align: center;
 
 }
-
-.returnCitySearch {
-    display: inline-block;
-    float: left;
-    font-family: "나눔바른펜";
-    margin: 50px;
-
-}
-.returnCitySearch a {
+a {
     font-size: xx-large;
     text-decoration: none;
+    font-family: "나눔바른펜";
     color: black;
     opacity: 0.3;
     transition: all 2s;
-}
-.returnCitySearch a:hover {
-    opacity: 1.0;
-    transition: all 2s;
 
 }
 
-.returnMainPage {
-    display: inline-block;
-    float: left;
-    margin: 50px;
-    font-family: "나눔바른펜";
-}
-
-.returnMainPage a {
-    font-size: xx-large;
-    text-decoration: none;
-    color: black;
-    opacity: 0.3;
-    transition: all 2s;
-}
-.returnMainPage a:hover {
+a:hover {
     opacity: 1.0;
     transition: all 2s;
 }

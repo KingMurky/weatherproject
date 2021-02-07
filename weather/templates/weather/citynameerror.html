@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>뭔가 잘못됐어요..</title>
     <link href="{% static 'weather/errorpage.css' %}" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -22,17 +22,12 @@
         </div>
     </article>
     <article class="returnbutton">
-        <div class="returnCitySearch">
-            <a href="{% url 'current' %}">
-                도시 입력 페이지
-            </a>
-        </div>
-        <div class="returnMainPage">
-            <a href="{% url 'index' %}">
-                메인 페이지
-            </a>
-        </div>
-
+        <a href="{% url 'current' %}">
+            도시 입력 페이지
+        </a>
+        <a href="{% url 'index' %}">
+            메인 페이지
+        </a>
     </article>
 </section>
 
